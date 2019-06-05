@@ -12,6 +12,5 @@ img {
 
 .itemName {
   flex: 1;
-  margin: 30px;
-  font-weight: bold;
+  padding: 30px;
 }
