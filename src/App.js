@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TVshow from './TVshow';
 import Daredevil from './images/Daredevil.jpg';
 import Gotham from './images/Gotham.jpg';
 import StarTrek from './images/Star Trek.jpg';
@@ -11,50 +12,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <br /><br /><br />
         <div className='container'>
-          <div className='itemName'>
-            <img src={Daredevil} alt='Daredevil cover' />
-          <div className='overlay'>
-            <h1>Daredevil</h1>
-          </div>
-          </div>
-          <div className='itemName'>
-            <img src={Gotham} alt='Gotham cover' />
-            <div className='overlay'>
-              <h1>Gotham</h1>
-            </div>
-          </div>
-          <div className='itemName'>
-            <img src={StarTrek} alt='Star Trek cover' />
-            <div className='overlay'>
-              <h1>Star Trek Discovery</h1>
-            </div>
-          </div>
+          <TVshow name='Daredevil' cover={Daredevil} />
+          <TVshow name='Gotham' cover={Gotham} />
+          <TVshow name='Star Trek Discovery' cover={StarTrek} />
         </div>
         <div className='container'>
-          <div className='itemName'>
-            <img src={Supergirl} alt='Supergirl cover' />
-            <div className='overlay'>
-              <h1>Supergirl</h1>
-            </div>
-          </div>
-          <div className='itemName'>
-            <img src={Vikings} alt='Vikings cover' />
-            <div className='overlay'>
-              <h1>Vikings</h1>
-            </div>
-          </div>
-          <div className='itemName'>
-            <img src={Westworld} alt='Westworld cover' />
-            <div className='overlay'>
-              <h1>Westworld</h1>
-            </div>
-          </div>
-        </div>
+          <TVshow name='Supergirl' cover={Supergirl} />
+          <TVshow name='Vikings' cover={Vikings} />
+          <TVshow name='Westworld' cover={Westworld} />
+        </div >
       </div>
-      );
+        );
+      }
     }
-  }
-  
-  export default App;
+
+      
+export default App;
