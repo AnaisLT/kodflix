@@ -4,7 +4,7 @@
   padding: 30px;
 }
 
-img {
+img{
   width: 100%;
 }
 
@@ -14,14 +14,13 @@ img {
 
 .itemName {
   flex: 1;
-  padding: 30px;
-  border: 1px solid black;
   position: relative;
+  padding: -5px;
+  margin: -1pt;
   overflow: hidden;
 }
 
 .overlay {
-  transition: bottom ease 1s; 
   position: absolute;
   bottom: -100px;
   left: 0;
@@ -29,6 +28,7 @@ img {
   color: white;
   background-color: lightslategrey;
   opacity: .8;
+  transition: bottom ease-out 1.5s;
 }
 
 .itemName:hover .overlay {
