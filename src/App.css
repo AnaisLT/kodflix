@@ -15,8 +15,8 @@ img{
 .itemName {
   flex: 1;
   position: relative;
-  padding: -5px;
-  margin: -1pt;
+  padding: 0px;
+  margin: -5pt;
   overflow: hidden;
 }
 
