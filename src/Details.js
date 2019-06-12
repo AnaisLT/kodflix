@@ -7,7 +7,7 @@ export default function Details() {
     <h1>Welcome to the details page.</h1>
       <p>Coming soon!</p>
     <Link to='/'>
-      Back to home page
+      Back to the home page
     </Link>
     </>
     )
