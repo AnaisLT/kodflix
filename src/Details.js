@@ -20,7 +20,6 @@ export default class Details extends Component {
     return (
       <div>
         <h1>{this.state.welcomeMessage}</h1>
-        <p>Excuse our appearance while we get ready for the show.</p>
         <Link to='/'>Back to the home page</Link>
       </div>
     );
