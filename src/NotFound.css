@@ -1,0 +1,28 @@
+
+.notfoundalert {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px;
+}
+
+.text {
+    font-weight: normal;
+    font-size: 22px;
+}
+
+.backhome {
+    background-color: black;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.backhome a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}

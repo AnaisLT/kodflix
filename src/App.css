@@ -1,6 +1,6 @@
-.App {
+* {
   text-align: center;
-  margin: 0pt;
+  margin: 0px;
   padding: 0px;
 }
 
@@ -12,6 +12,7 @@ img{
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: stretch;
 } 
 
 .itemName {
