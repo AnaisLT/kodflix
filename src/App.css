@@ -30,7 +30,7 @@ img{
   color: white;
   background-color: black;
   opacity: .7;
-  transition: bottom ease-out 3s;
+  transition: bottom ease-out 1.5s;
 }
 
 .itemName:hover .overlay {
