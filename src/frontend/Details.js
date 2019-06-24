@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import getGallery from '../gallery_get';
+import getGallery from './gallery_get';
 import './Details.css'
 
 export default class Details extends Component {

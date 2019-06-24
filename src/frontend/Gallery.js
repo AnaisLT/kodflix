@@ -15,7 +15,7 @@ export default function Gallery() {
               cover={tvshow.cover} />
           ))
         }
-      </div >
+      </div>
     </div>
   );
 }
