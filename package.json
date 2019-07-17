@@ -14,7 +14,7 @@
     "save": "^2.4.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm-run-all -s build _start-backend",
     "start-dev": "npm-run-all -p start start-backend",
     "_start-frontend": "react-scripts start",
     "_start-backend": "nodemon src/backend/app.js",
