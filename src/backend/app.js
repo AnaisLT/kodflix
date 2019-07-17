@@ -9,6 +9,6 @@ app.get('/rest/tvshows', (req, res) => res.send(getShows()));
 app.use(express.static(path.join(_dirname, '../../build')));
 app.get('*', function (req, res) {
     res.sendFile(path.join(_dirname, '../../build', 'index.html'));
-})
+});
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`Listening on port ${port}`));
