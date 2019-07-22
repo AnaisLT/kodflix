@@ -1,36 +1,39 @@
 import React, { Component } from 'react';
-import TVshow from './TVshow';
-import getGallery from './gallery_get';
+import TVCover from './TVCover.js';
 
-class Gallery extends Component {
+export default class Gallery extends Component {
+  constructor() {
+    super();
+    this.state = { backendShows: []};
+  }
 
   componentDidMount() {
     fetch('/rest/tvshows')
-      .then(function(response) {
-      return response.json();
+      .then(function (response) {
+        return response.json();
       })
-      .then(function(myJson) {
-      console.log(myJson);
+      .then(backendShows => {
+        this.setState({ backendShows });
       });
   }
+
   render() {
+    console.log(this.state.backendShows)
     return (
       <div>
         <div className='container'>
           {
-            getGallery().map(tvshow => (
-              <TVshow
-                key={tvshow.id}
-                id={tvshow.id}
-                name={tvshow.name}
-                cover={tvshow.cover} />
-            ))
+            this.state.backendShows.map(tvshow => {
+              return (
+                <TVCover
+                  key={tvshow.id}
+                  id={tvshow.id}
+                  title={tvshow.title} />
+              )
+            })
           }
         </div>
       </div>
-    );
+    )
   }
 }
-
-export default Gallery
-

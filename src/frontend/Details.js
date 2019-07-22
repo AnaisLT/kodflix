@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
-import getGallery from './gallery_get';
+import { Redirect } from 'react-router-dom';
 import './Details.css'
 
 export default class Details extends Component {
@@ -12,34 +11,48 @@ export default class Details extends Component {
   }
 
   componentDidMount() {
-    let tvshowId = this.props.match.params.tvshowId;
-    let tvshow = getGallery()
-      .find((tvshow) => tvshow.id === tvshowId);
-    this.setState({ tvshow: tvshow });
+    fetch('/rest/tvshows')
+      .then(response => response.json())
+      .then(tvshows => {
+        let tvshowId = this.props.match.params.tvshowId;
+        let tvshow = tvshows
+          .find((tvshow) => tvshow.id === tvshowId);
+        this.setState({ tvshow })
+      });
   }
 
   render() {
-    if (this.state.tvshow === undefined) {
-      return <Redirect to='/not-found' />;
-    } else {
-      return (
-        <div className='Details'>
-          <h1 className='title'>{this.state.tvshow.name}</h1>
-          <div className='content'>
-            <div className='synopsis'>
-              {this.state.tvshow.synopsis}
-            </div>
-            <div className='image'>
-              <img
-                src={this.state.tvshow.cover}
-                alt={this.state.tvshow.name} />
-            </div>
-            </div>
-          <button>
-          <Link to='/'>Home page</Link>
-          </button>
-        </div >
-      );
+    let tvshow = this.state.tvshow;
+      if (tvshow) {
+      return tvshow.id ?
+        <DetailsContent tvshow={tvshow} /> :
+        <div />
+        } 
+        else {
+          return <Redirect to='/not-found' />;
+        };
     }
   }
+  //   <button>
+  //   <Link to='/'>Home page</Link>
+  // </button>
+  //   </div >
+
+function DetailsContent({ tvshow }) {
+  return (
+    <div className='details'>
+      <h1>{tvshow.title}</h1>
+      <div className='details-content'>
+        <h3 className='details-content-synopsis'>
+          {tvshow.synopsis}
+        </h3>
+        <div className='details-content-cover'>
+          <img
+            src={require(`./common/images/${tvshow.id}.jpg`)}
+            alt={tvshow.cover}
+          />
+        </div>
+      </div>
+    </div>
+  )
 }

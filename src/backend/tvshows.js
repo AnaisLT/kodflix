@@ -24,10 +24,6 @@ module.exports = function getShows() {
         title: 'Westworld',
         synopsis:'In a Wild West fantasy park staffed by artificial hosts, guests find themselves confronted to a dangerous world of infinite possibilities...'
     }, {
-        id: 'jessica-jones',
-        title: 'Jessica Jones',
-        synopsis: 'Haunted by a traumatic past, she\'s also a gifted PI with super abilities... and quite a temperament.'
-    }, {
         id: 'good-omens',
         title: 'Good Omens',
         synopsis: 'The End of the World is coming, which means a fussy Angel and a loose-living Demon who\'ve become overly fond of life on Earth are forced to form an unlikely alliance to stop Armageddon.'
