@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TVCover from './TVCover.js';
+import './App.css';
 
 export default class Gallery extends Component {
   constructor() {
@@ -18,7 +19,6 @@ export default class Gallery extends Component {
   }
 
   render() {
-    console.log(this.state.backendShows)
     return (
       <div>
         <div className='container'>

@@ -8,7 +8,7 @@ module.exports = function getShows() {
         title: 'Gotham',
         synopsis: 'Rookie cop James Gordon takes on Gotham City crime and corruption to avenge the murder of Bruce Wayne\'s parents.'
     }, {
-        id: 'star-trek-discovery',
+        id: 'startrek',
         title: 'Star Trek Discovery',
         synopsis: 'After a century of silence, war erupts between the Federation and Klingon Empire, with a disgraced Starfleet officer at the center of the conflict.'
     }, {
@@ -24,7 +24,7 @@ module.exports = function getShows() {
         title: 'Westworld',
         synopsis:'In a Wild West fantasy park staffed by artificial hosts, guests find themselves confronted to a dangerous world of infinite possibilities...'
     }, {
-        id: 'good-omens',
+        id: 'goodomens',
         title: 'Good Omens',
         synopsis: 'The End of the World is coming, which means a fussy Angel and a loose-living Demon who\'ve become overly fond of life on Earth are forced to form an unlikely alliance to stop Armageddon.'
     }];
